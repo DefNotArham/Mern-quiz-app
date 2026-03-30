@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Quiz Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background-color: #eaf8f0;
+        color: #1a1a1a;
+        min-height: 100vh;
+      }
+
+      header {
+        background: linear-gradient(90deg, #a8e6a2, #81c784);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+
+      header h1 {
+        color: #155724;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .btn {
+        background: linear-gradient(90deg, #81c784, #4caf50);
+        color: #fff;
+        padding: 0.6rem 1.5rem;
+        border-radius: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background: linear-gradient(90deg, #4caf50, #388e3c);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      main {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .quiz-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .quiz-card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        padding: 1.5rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .quiz-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .quiz-card h2 {
+        color: #1b5e20;
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .quiz-card p {
+        color: #555;
+        margin-bottom: 1.2rem;
+        font-size: 0.95rem;
+      }
+
+      .quiz-card .start-btn {
+        align-self: center;
+        padding: 0.6rem 1.5rem;
+        border-radius: 10px;
+        font-weight: 600;
+        background: linear-gradient(90deg, #81c784, #4caf50);
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .quiz-card .start-btn:hover {
+        background: linear-gradient(90deg, #4caf50, #388e3c);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Quiz Dashboard Header -->
+    <header>
+      <h1>Green Quiz Dashboard</h1>
+      <a href="#" class="btn">+ Create Quiz</a>
+    </header>
+
+    <!-- Main Quiz List -->
+    <main>
+      <div class="quiz-list">
+        <div class="quiz-card">
+          <h2>Math Quiz</h2>
+          <p>Test your skills with 10 challenging math questions!</p>
+          <a href="#" class="start-btn">Start Quiz</a>
+        </div>
+        <div class="quiz-card">
+          <h2>Science Quiz</h2>
+          <p>Explore science knowledge with 8 interesting questions.</p>
+          <a href="#" class="start-btn">Start Quiz</a>
+        </div>
+        <div class="quiz-card">
+          <h2>History Quiz</h2>
+          <p>Answer 12 questions about historical events and figures.</p>
+          <a href="#" class="start-btn">Start Quiz</a>
+        </div>
+        <div class="quiz-card">
+          <h2>Geography Quiz</h2>
+          <p>Challenge your geography knowledge with 15 questions!</p>
+          <a href="#" class="start-btn">Start Quiz</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
