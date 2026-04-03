@@ -1,11 +1,15 @@
 import HomePage from "./pages/HomePage";
 import CreateQuiz from "./pages/CreateQuiz";
+import NotFound from "./pages/NotFound";
+import StartQuiz from "./pages/StartQuiz";
+
 import { Route, Routes } from "react-router";
 import { useState } from "react";
 
 function App() {
   const [questions, setQuestions] = useState([
     {
+      id: Date.now(),
       question: "",
       description: "",
       options: ["", "", "", ""],
@@ -33,6 +37,11 @@ function App() {
           />
         }
       />
+
+      <Route path={`/quiz/:id`} element={<StartQuiz />} />
+
+      <Route path={`/404`} element={<NotFound />} />
+      <Route path={`*`} element={<NotFound />} />
     </Routes>
   );
 }
