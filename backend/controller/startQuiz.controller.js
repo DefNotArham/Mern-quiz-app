@@ -2,6 +2,7 @@ import Quiz from "../model/quiz.model.js";
 
 const startQuiz = async (req, res) => {
   const { id } = req.params;
+
   try {
     const quiz = await Quiz.findById(id);
 
